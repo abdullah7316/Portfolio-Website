@@ -6,3 +6,5 @@ Yellow: rgb(255,170,23)
 Dark Grey: rgb(27,32,50)
 Blue: rgb(14,92,166)
 Grey : Text Color: rgb(168,168,168)
+bg-dark: color: rgb(33, 37, 41)
+
