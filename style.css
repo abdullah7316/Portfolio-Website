@@ -78,17 +78,17 @@
     color: white;
     background-color: var(--main-color);
 }
-.introduction{
-    /* border: 2px solid var(--main-color); */
-    
+.introduction > h1{
+    color: var(--main-color);
+}
+.introduction > h1 > span{
+    color: var(--black-color);
 }
 .person-image{
-    /* border: 2px solid var(--main-color); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .info{
-    margin-top: 200px;
     text-transform: uppercase;
 }
