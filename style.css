@@ -4,18 +4,20 @@
     --third-color: #c6c6c6;
     --white-color: white;
     --black-color: black;
-    --menu-text-size: 16px;
+    --base-text-size: 16px;
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-size: var(--base-text-size);
+}
 /*---------------------------------Navbar CSS---------------------------------*/
 .navbarcss{
-    padding: 10px 30px 5px 30px;
+    padding: 7px 30px 3.5px 30px;
     background-color: var(--white-color);
-    box-shadow: 0px 0px 15px var(--black-color);
 }
 #navbarNav ul li{
     list-style: none;
@@ -27,19 +29,20 @@
     color: var(--black-color);
     transition: all 0.3s ease;
     text-align: center;
-    font-size: var(--menu-text-size);
+    font-size: var(--base-text-size);
     font-weight: bold;
+    letter-spacing: 1px;
 }
 #navbarNav a:hover{
     color: var(--main-color);
+}
+nav.sticky{
+    box-shadow: 0px 0px 10px var(--secondary-color);
 }
 
 /*---------------------------------First page CSS---------------------------------*/
 .introduction{ 
     padding-top: 10%;
-}
-.introduction > p{
-    text-align: justify;
 }
 .introduction > h1{
     color: var(--main-color);
@@ -52,27 +55,29 @@
     justify-content: center;
     align-items: center;
 }
-.info,{
+.info{
     text-transform: uppercase;
 }
 .info > span{
     color: var(--main-color);
 }
-.introduction .readmore-btn{
+.introduction .letstalk-btn{
     text-decoration: none;
-    color: var(--main-color);
-    background-color: var(--black-color);
-    padding: 2px 6px 3px 6px;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 4px 20px 5px 20px;
     margin: 10px;
     margin-top: 0;
     transition: all 0.4s ease;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 3px;
     float: right;
 }
-.introduction .readmore-btn:hover{
-    color: var(--white-color);
-    background-color: var(--black-color);
+.introduction .letstalk-btn:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
 }
 /*-----------------------------------About Me CSS-------------------------------------*/
 .about-me .image-div{
@@ -81,10 +86,70 @@
     align-items: center;
 }
 .text-div{
-    padding-top: 15%;
+    padding-top: 120px;
+    padding-bottom: 120px;
     color: var(--black-color);
 }
 .text-div > p{
     font-weight: 470;
-    text-align: justify;
 }
+.text-div h1 span{
+    color: var(--main-color);
+}
+
+/*-------------------------------------Offered Services Section----------------------------------*/
+.services > h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+}
+.services > h1 > span{
+    color: var(--main-color);
+}
+.services h1::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+}
+.services h1:hover::before, .services h1:active::before{
+    width: 100%;
+    left: 0%;
+}
+
+.services .row div{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    transform: scale3d(1,1,1); 
+    transition: all ease-in 0.3s;
+}
+.services .web-development:hover, .services .web-design:hover, .services .logo-design:hover{
+    transition: all ease-in-out 0.3s;
+    transform: scale3d(1.05,1.05,1.05);
+}
+.services .image{
+    height: 500px;
+    zoom: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background: no-repeat center;
+}
+.services .web-development .image{
+    background-image: url(images/web-deve-orange-color-500px.jpg);
+}
+.services .web-design .image{
+    background-image: url(images/web-design-image-500px.jpg);
+}
+.services .logo-design .image{
+    background-image: url(images/logo-design-image-500px.jpg);
+}
+
