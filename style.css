@@ -1,7 +1,7 @@
 :root{
     --main-color: #ff6700;
     --secondary-color: #9b9b9b;
-    --third-color: #c6c6c6;
+    --third-color: #f0f0f0;
     --white-color: white;
     --black-color: black;
     --base-text-size: 16px;
@@ -41,6 +41,10 @@ nav.sticky{
 }
 
 /*---------------------------------First page CSS---------------------------------*/
+.fisrt-page{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
 .introduction{ 
     padding-top: 10%;
 }
@@ -92,6 +96,7 @@ nav.sticky{
 }
 .text-div > p{
     font-weight: 470;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .text-div h1 span{
     color: var(--main-color);
@@ -101,7 +106,6 @@ nav.sticky{
 .services > h1{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 25px;
     position: relative;
     cursor: pointer;
     width: max-content;
@@ -128,7 +132,6 @@ nav.sticky{
     margin: 0;
     padding: 10px;
     text-align: center;
-    transform: scale3d(1,1,1); 
     transition: all ease-in 0.3s;
 }
 .services .web-development:hover, .services .web-design:hover, .services .logo-design:hover{
@@ -152,4 +155,90 @@ nav.sticky{
 .services .logo-design .image{
     background-image: url(images/logo-design-image-500px.jpg);
 }
-
+.services .btn{
+    border: 1px solid black;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+    border-radius: 50px;
+}
+.services .btn:hover{ 
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white-color);
+    transition: all 0.3s ease-out;
+}
+.services > .my-quot{
+    font-weight: 500;
+    font-size: large;
+    color: var(--black-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.services .line{
+    color: var(--main-color);
+}
+/*-------------------------------------Feedback CSS------------------------------------*/
+.feedback-css > h1{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feedback-css h1::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    background-color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+}
+.feedback-css h1:hover::before, .feedback-css h1:active::before{
+    width: 100%;
+    left: 0%;
+}
+.feedback-css > .line{
+    color: var(--main-color);
+}
+.feedback-css .item-1, .feedback-css .item-2{
+    height: 200px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+}
+.feedback-css .item-1:hover, .feedback-css .item-2:hover{
+    border: 1px solid var(--main-color);
+}
+.feedback-css .image{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.feedback-css .item-1 .image{
+    background: url(/images/MenPic2-100px.jpg) no-repeat center;
+}
+.feedback-css .item-2 .image{
+    background: url(/images/MenPic1-100px.jpg) no-repeat center;
+}
+.feedback-css .text{
+    margin: 5px;
+    margin-top: 10px;
+}
+.feedback-css .name{
+    text-align: right;
+    padding: 20px;
+}
