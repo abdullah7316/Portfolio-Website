@@ -41,7 +41,7 @@ nav.sticky{
 }
 
 /*---------------------------------First page CSS---------------------------------*/
-.fisrt-page{
+.first-page{
     margin-bottom: 100px;
     margin-top: 100px;
 }
@@ -83,20 +83,24 @@ nav.sticky{
     background-color: transparent;
     border: 1px solid var(--main-color);
 }
+/* @media(min-width:576px) and (max-width:769px){
+    .fisrt-page .person-image img{
+        height: 350px;
+    }
+} */
 /*-----------------------------------About Me CSS-------------------------------------*/
 .about-me .image-div{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.text-div{
+.about-me .text-div{
     padding-top: 120px;
     padding-bottom: 120px;
     color: var(--black-color);
 }
 .text-div > p{
     font-weight: 470;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 .text-div h1 span{
     color: var(--main-color);
@@ -133,10 +137,12 @@ nav.sticky{
     padding: 10px;
     text-align: center;
     transition: all ease-in 0.3s;
+    border-radius: 10px;
 }
 .services .web-development:hover, .services .web-design:hover, .services .logo-design:hover{
     transition: all ease-in-out 0.3s;
     transform: scale3d(1.05,1.05,1.05);
+    border: 1px solid var(--main-color);
 }
 .services .image{
     height: 500px;
@@ -162,7 +168,7 @@ nav.sticky{
     padding: 8px 20px;
     letter-spacing: 1px;
     transition: all 0.3s ease-in;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 .services .btn:hover{ 
     border: 1px solid var(--main-color);
@@ -208,9 +214,8 @@ nav.sticky{
 .feedback-css > .line{
     color: var(--main-color);
 }
-.feedback-css .item-1, .feedback-css .item-2{
-    height: 200px;
-    width: 45%;
+.feedback-css .cell{
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -218,7 +223,20 @@ nav.sticky{
     border: 1px solid var(--third-color);
     border-radius: 10px;
 }
-.feedback-css .item-1:hover, .feedback-css .item-2:hover{
+
+@media(min-width:768px){
+    .feedback-css .cell{
+        width: 45%;
+    }
+}
+@media(max-width:767px){
+    .feedback-css .cell{
+        margin: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.feedback-css .cell:hover{
     border: 1px solid var(--main-color);
 }
 .feedback-css .image{
@@ -234,6 +252,12 @@ nav.sticky{
 .feedback-css .item-2 .image{
     background: url(/images/MenPic1-100px.jpg) no-repeat center;
 }
+.feedback-css .item-3 .image{
+    background: url(/images/WomenPic1-100px.jpg) no-repeat center;
+}
+.feedback-css .item-4 .image{
+    background: url(/images/MenPic2-100px.jpg) no-repeat center;
+}
 .feedback-css .text{
     margin: 5px;
     margin-top: 10px;
@@ -242,3 +266,5 @@ nav.sticky{
     text-align: right;
     padding: 20px;
 }
+
+
